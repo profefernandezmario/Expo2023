@@ -1,0 +1,257 @@
+/* Ajustes generales START*/
+*{
+    box-sizing: border-box;
+    margin: 0px;
+    padding: 0px;
+} 
+body{
+  background-image: url(../DptoElectricidadyElectronica-V6.0/imagenes/Background/backgroundYellow.jpg);
+  background-size: contain;
+}
+
+main{
+    position: relative;
+    min-height: 100%;
+    padding-bottom:50px;
+}
+/* Ajustes generales END*/
+
+/* Barra de "navegación" */
+.navBar{
+    background-color: rgb(196, 183, 0);
+}
+/* Titulo del NavBar */
+.contenedorTxt{
+    justify-content: center;
+    text-align: center;
+}
+
+.contenedorTxt > h2{
+    color: rgb(0, 0, 0);
+    text-shadow: #deff22 2px 2px 4px;
+}
+/* Barra de "navegación END */
+
+/* Boton HOME*/
+#btnHome{
+  float: right;
+}
+
+.btnDefault{
+    text-align: center;
+    padding: 7px 7px;
+    color: #deff22;
+    font-size: 20px;
+    text-decoration: none;
+    text-transform: uppercase;
+    transition: 0.5s;
+    letter-spacing: 4px;
+}
+
+.btnDefault:hover{
+    background: #deff22;
+    color: black;
+    box-shadow:  0 0 5px #deff22,
+                 0 0 25px #deff22,
+                 0 0 50px #deff22,
+                 0 0 200px #deff22;
+}
+/* Boton HOME END*/
+
+/* Logo START*/
+.logo{
+    margin-right: 15px;
+    width: 90px;
+    height: 50px;
+    float: left;
+}
+.LogoEFP7{
+    width: 80px;
+    left: 5px;
+    margin-top: 3px;
+}
+/* Logo END */ 
+
+/* Carousel Dpto Informática START */
+#carouselDptoInformatica{
+  margin-bottom: 50px;
+  justify-content: center;
+}
+/* Contenedor del carousel */
+.carousel-item{
+  width: 100%;
+  height: 500px;
+  text-align: center;
+}
+/* Imagen del carousel */
+.carousel-inner > .carousel-item > img {
+  height: 500px;
+  width: 600px;
+  
+}
+
+.titleCarousel{
+  font-size: 22px;
+  font-weight: bold;
+  text-shadow: #deff22 2px 2px 4px;
+}
+
+/* Carousel Dpto Informática END */
+
+/* Diseño cards START*/
+.row{
+  justify-content: center;
+}
+
+.card{
+    text-align: center;
+    margin: 2px;
+    margin-left: 5px;
+    color: white;
+    background-color: rgb(196, 183, 0);
+    width: 95vw;
+}
+.card:hover{
+    box-shadow: #deff22 1px 1px 2px 2px,#deff22 -1px -1px 2px 2px;
+}
+
+.card-body > p{
+  margin: 0px;
+}
+
+.card-text{
+  margin: 0px;
+}
+
+.textHs{
+  margin: 0px;
+}
+
+.txtCard{
+  margin: 0px;
+}
+
+#titleCard{
+    color: black;
+    /* font-size: 30px; */
+    font-weight: bold;
+    text-shadow: #deff22 2px 2px 4px;
+
+    background-color: blue;
+    border-radius: 50px;
+    border: 5px double rgb(0, 0, 0);
+    padding: 5px;
+}
+
+.sedeTag{
+  position:absolute;
+  padding: 5px 25px 5px 0px;
+  color: black;
+  border-bottom-right-radius: 100px;
+  border-right:2px solid #deff22;
+  border-top:2px solid #deff22;
+  border-bottom:2px solid #deff22;
+}
+
+.card-text2{
+  float: left;
+  margin: 0;
+}
+
+.card-text3{
+  float: right;
+  margin: 0;
+}
+
+/* img Card */
+
+#img-card{
+    border: 5px double #deff22;
+    border-radius: 100px;
+    margin: 2px 0px 2px 5px;
+    
+}
+#img-card:hover {
+    filter: saturate(180%);
+}
+/* Diseño cards END*/
+
+/* start footer */
+footer {
+    width: 100vw;
+    height: 50px;
+    background-color: rgb(196, 183, 0);
+    border-top: 3px solid #deff22;
+    padding: 0px;
+    /* text-align: center; */
+    color: #03e9f4;
+    position: fixed;
+    bottom: 0;
+  }
+  /* Botones footer */
+  #btn01{
+    float: left;
+  }
+  #btn02{
+    float: right;
+    margin-right: 12px;
+  }  
+
+  /* Modal config START */
+  .myModalContent{
+    background-color: rgb(196, 183, 0);
+  }
+  .myModalContent > h1{
+    font-size: 30px;
+    font-weight: bold;
+    text-shadow: #03e9f4 2px 2px 4px; 
+  }
+  
+  .myModal{
+    height: 300px;
+    text-align: center;
+    background-color: rgb(196, 183, 0);
+  }
+
+  .myModal > a{
+    text-decoration: none;
+    color: #deff22;
+  }
+
+  .modalPic{
+    width: 80px;
+    height: 80px;
+    border: 5px double #deff22;
+    border-radius: 10px;
+  }
+  .modalPic2{
+    width: 80px;
+    border: 5px double #deff22;
+    border-radius: 10px;
+  }
+  .myModal > p{
+    color: #deff22;
+  }
+
+  /* MODAL02 CONTACTO */
+  .myModalContent02{
+    background-color: rgb(196, 183, 0);
+  }
+  .myModalContent02 > h1{
+    font-size: 30px;
+    font-weight: bold;
+    text-shadow: #deff22 2px 2px 4px; 
+  }
+  .myModal02{
+    text-align: center;
+    background-color: rgb(231, 231, 231);
+  }
+  .myModal02 > a{
+    margin: 5px;
+    text-decoration: none;
+    color: black;
+  }
+  /* Modal config END*/
+
+/* FOOTER  END*/
+

@@ -1,0 +1,464 @@
+<!DOCTYPE html>
+<html lang="es-AR>
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="Estructura de Departamentos de la EFP7 y sus diversas ofertas">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <meta name="keywords" content="efp7, sitio, deptos, departamentos, informatica, unica, electricidad, electronica, gestion, reparacion, reparacion de pc, rep pc, operador, operador de pc">
+    <meta name="author" content="M.F.P. Mario R. Fernández">
+    <title>Kiosko Multimedia</title>
+    <link rel="stylesheet" href="./css/bootstrap.min.css">
+    <link rel="stylesheet" href="./css/fuegos.css">
+ 
+    <style>
+        .tamanio {
+            font-size: 20px;
+        }
+
+        .mydiv {
+            position: relative;
+            margin: 10% auto 0;
+            width: 95%;
+            /* height: 200px; */
+            height: 93%;
+            background: linear-gradient(180deg, white, #c5cae9);
+            /*   background: white; */
+        }
+
+        .animate-bg:before,
+        .animate-bg:after {
+            content: '';
+            position: absolute;
+            left: -8px;
+            top: -8px;
+            /* background: linear-gradient(120deg, #79fb00, #8d01a0, #031ba5,#ff004c,  
+            #e6036d, #fb0094,#ff6600, #04c2e4,#adad02, #00c3ff); */
+            background: linear-gradient(120deg, #031ba5, #00c3ff);
+            background-size: 300%;
+            width: calc(100% + 16px);
+            height: calc(100% + 16px);
+            z-index: -1;
+            animation: BGgradient 10s ease infinite;
+        }
+
+        @keyframes BGgradient {
+            0% {
+                background-position: 0% 200%;
+            }
+
+            50% {
+                background-position: 200% 0%;
+            }
+
+            100% {
+                background-position: 0% 330%;
+            }
+        }
+
+        .animate-bg:after {
+            filter: brightness(1.4);
+            filter: drop-shadow(16px 16px 20px rgb(248, 220, 97));
+            filter: blur(15px);
+        }
+
+        .sliderMio {
+            top: 1em;
+            position: relative;
+            /*   box-sizing: border-box; */
+            animation: sliderMio 15s linear infinite;
+            list-style-type: none;
+            text-align: center;
+        }
+
+        .sliderMio:hover {
+            animation-play-state: paused;
+        }
+
+        @keyframes sliderMio {
+            0% {
+                top: 10em
+            }
+
+            100% {
+                top: -14em
+            }
+        }
+
+        .blur .sliderMio {
+            margin: 0;
+            padding: 0 1em;
+            line-height: 1.5em;
+        }
+
+        .blur:before,
+        .blur::before,
+        .blur:after,
+        .blur::after {
+            left: 0;
+            z-index: 1;
+            content: '';
+            position: absolute;
+            width: 100%;
+            height: 2em;
+            background-image: linear-gradient(180deg, #FFF, rgba(255, 255, 255, 0));
+        }
+
+        .blur:after,
+        .blur::after {
+            bottom: 0;
+            transform: rotate(180deg);
+        }
+
+        .blur:before,
+        .blur::before {
+            top: 0;
+        }
+
+        .brand-logo {
+            position: absolute;
+            color: #fff;
+            display: inline-block;
+            font-size: 50px;
+            padding: 0;
+            white-space: nowrap;
+            font-family: 'Pacifico', cursive;
+            text-shadow: 0 0 1px #fff, 0 0 2px #fff, 0 0 6px #292736, 0 0 8px #292736, 0 0 10px #292736, 0 0 12px #292736, 0 0 14px #292736;
+            animation: glow .59s infinite alternate;
+        }
+
+        /*   body {
+            background-color: #131219;
+        }
+ */
+        /* Animation as suggested by Ismail Ghallou */
+        @keyframes glow {
+            to {
+                text-shadow: 0 0 4px #fff, 0 0 8px #fff, 0 0 12px rgb(72, 193, 223), 0 0 16px rgb(72, 193, 223), 0 0 20px rgb(72, 193, 223), 0 0 24px rgb(72, 193, 223), 0 0 28px rgb(72, 193, 223);
+            }
+        }
+
+        .brand-logo {
+            text-shadow: 0 0 1px #fff, 0 0 2px #fff, 0 0 6px #292736, 0 0 8px #292736, 0 0 10px #292736, 0 0 12px #292736, 0 0 14px #292736;
+            animation: glow .80s infinite alternate;
+        }
+
+        .TextoMarquesina {
+            margin: 0;
+            color: black;
+            padding-left: 5px;
+        }
+
+        .agradecimiento {
+            color: royalblue;
+            font-weight: bold;
+            font-style: italic;
+            margin: 0;
+            padding-left: 17px;
+        }
+
+        .profes {
+            color: steelblue;
+            font-style: italic;
+            margin: 0;
+            padding-left: 20px;
+        }
+
+        .titulomarquesina {
+            color: royalblue;
+        }
+        .medidas{
+            width: 95px;
+            height: 190px;
+        }
+    </style>
+</head>
+
+<body class="bg-white">    
+    <div class="container">
+        <header class="d-flex flex-wrap justify-content-start border-bottom">
+            <div class="container text-center">               
+                <div class="row">
+                    <div class="col-2 ">
+                        <img src="./Assets/Imagenes/logos/Logo EFP7.jpg" height="70px">
+                       
+                    </div>
+                    <div class="col-8 position-relative">
+                        <div class="d-flex justify-content-center">
+                            <h1 class="brand-logo">Expo 2023</h1>
+                        </div>
+                    </div>
+                    <div class="col-2">
+                        <audio src="./intro musical.wav" autoplay loop controls="controls"></audio>
+                    </div>
+                </div>
+            </div>
+        </header>
+        <div class="row p-1 text-center">
+            <div class="col-9">
+                <div class="row p-1">
+                    <div class="col-4">
+                        <div class="card">
+                            <div class="card-header bg-primary-subtle">
+                                <h5>Informática</h5>
+                                <!-- ----------------------------------DEPARTAMENTO------------------------------------------------>
+                            </div>
+                            <div class="card-body justify-content-center">
+                                <!-- <p class="card-text">With supporting text below as a natural lead-in to additional content.</p> -->
+                                <div id="carouselExampleInterval" class="carousel slide" data-bs-ride="carousel">
+                                    <div class="carousel-inner">
+                                        <div class="carousel-item active" data-bs-interval="1000">
+                                            <!-- <img src="./Assets/Imagenes/2-informatica.jpg" class="d-block w-100"
+                                                alt="..."> -->
+                                            <img src="./Assets/Imagenes/info-1.webp" class="d-block w-100 medidas" alt="...">
+                                        </div>
+                                        <div class="carousel-item" data-bs-interval="1300">
+                                            <!-- <img src="./Assets/Imagenes/2-informatica.jpg" class="d-block w-100"
+                                                alt="..."> -->
+                                            <img src="./Assets/Imagenes/info-2.webp" class="d-block w-100 medidas" alt="...">
+                                        </div>
+                                    </div>
+                                    <button class="carousel-control-prev" type="button"
+                                        data-bs-target="#carouselExampleInterval" data-bs-slide="prev">
+                                        <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+                                        <span class="visually-hidden">Previous</span>
+                                    </button>
+                                    <button class="carousel-control-next" type="button"
+                                        data-bs-target="#carouselExampleInterval" data-bs-slide="next">
+                                        <span class="carousel-control-next-icon" aria-hidden="true"></span>
+                                        <span class="visually-hidden">Next</span>
+                                    </button>
+                                </div>
+                                <br>
+                                <a href="./GrupoMario/DptoInfor-V6.0/index.html" class="btn btn-primary">Ver Detalles</a>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col-4">
+                        <div class="card">
+                            <div class="card-header bg-danger-subtle">
+                                <h5>Conf. e Imág. Personal</h5>
+                                <!-- ----------------------------------DEPARTAMENTO------------------------------------------------>
+                            </div>
+                            <div class="card-body justify-content-center">
+                                <!-- <p class="card-text">With supporting text below as a natural lead-in to additional content.</p> -->
+                                <div id="carouselExampleInterval" class="carousel slide" data-bs-ride="carousel">
+                                    <div class="carousel-inner">
+                                        <div class="carousel-item active" data-bs-interval="1100">
+                                            <!-- <img src="./Assets/Imagenes/2-informatica.jpg" class="d-block w-100"
+                                                alt="..."> -->
+                                            <img src="./Assets/Imagenes/conf-1-2.webp" class="d-block w-100 medidas" alt="...">
+                                        </div>
+                                        <div class="carousel-item" data-bs-interval="1400">
+                                            <!-- <img src="./Assets/Imagenes/2-informatica.jpg" class="d-block w-100"
+                                                alt="..."> -->
+                                            <img src="./Assets/Imagenes/conf-2.webp" class="d-block w-100 medidas" alt="...">
+                                        </div>
+                                    </div>
+                                    <button class="carousel-control-prev" type="button"
+                                        data-bs-target="#carouselExampleInterval" data-bs-slide="prev">
+                                        <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+                                        <span class="visually-hidden">Previous</span>
+                                    </button>
+                                    <button class="carousel-control-next" type="button"
+                                        data-bs-target="#carouselExampleInterval" data-bs-slide="next">
+                                        <span class="carousel-control-next-icon" aria-hidden="true"></span>
+                                        <span class="visually-hidden">Next</span>
+                                    </button>
+                                </div>
+                                <br>
+                                <a href="./GrupoGabriel/Sitio3/index.html" class="btn btn-primary">Ver Detalles</a>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col-4">
+                        <div class="card">
+                            <div class="card-header bg-secondary-subtle">
+                                <h5>Mecánica y Soldadura</h5>
+                                <!-- ----------------------------------DEPARTAMENTO------------------------------------------------>
+                            </div>
+                            <div class="card-body justify-content-center">
+                                <!-- <p class="card-text">With supporting text below as a natural lead-in to additional content.</p> -->
+                                <div id="carouselExampleInterval" class="carousel slide" data-bs-ride="carousel">
+                                    <div class="carousel-inner">
+                                        <div class="carousel-item active" data-bs-interval="1200">
+                                            <!-- <img src="./Assets/Imagenes/2-informatica.jpg" class="d-block w-100"
+                                                alt="..."> -->
+                                            <img src="./Assets/Imagenes/meca-2.webp" class="d-block w-100 medidas" alt="...">
+
+                                        </div>
+                                        <div class="carousel-item" data-bs-interval="1500">
+                                            <!-- <img src="./Assets/Imagenes/2-informatica.jpg" class="d-block w-100"
+                                                alt="..."> -->
+                                            <img src="./Assets/Imagenes/solda-1.webp" class="d-block w-100 medidas" alt="...">
+                                        </div>
+                                    </div>
+                                    <button class="carousel-control-prev" type="button"
+                                        data-bs-target="#carouselExampleInterval" data-bs-slide="prev">
+                                        <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+                                        <span class="visually-hidden">Previous</span>
+                                    </button>
+                                    <button class="carousel-control-next" type="button"
+                                        data-bs-target="#carouselExampleInterval" data-bs-slide="next">
+                                        <span class="carousel-control-next-icon" aria-hidden="true"></span>
+                                        <span class="visually-hidden">Next</span>
+                                    </button>
+                                </div>
+                                <br>
+                                <a href="./GrupoGabriel/Sitio1/index-bootstrap.html" class="btn btn-primary">Ver
+                                    Detalles</a>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="row p-1">
+                    <div class="col-4">
+                        <div class="card">
+                            <div class="card-header bg-success-subtle">
+                                <h5>Especialidades Unicas</h5>
+                                <!-- ----------------------------------DEPARTAMENTO------------------------------------------------>
+                            </div>
+                            <div class="card-body justify-content-center">
+                                <!-- <p class="card-text">With supporting text below as a natural lead-in to additional content.</p> -->
+                                <div id="carouselExampleInterval" class="carousel slide" data-bs-ride="carousel">
+                                    <div class="carousel-inner">
+                                        <div class="carousel-item active" data-bs-interval="1200">
+                                            <!-- <img src="./Assets/Imagenes/2-informatica.jpg" class="d-block w-100"
+                                                alt="..."> -->
+                                            <img src="./Assets/Imagenes/unicas-2.webp" class="d-block w-100 medidas" alt="...">
+                                        </div>
+                                        <div class="carousel-item" data-bs-interval="1500">
+                                            <img src="./Assets/Imagenes/unicas-3.webp" class="d-block w-100 medidas" alt="...">
+                                        </div>
+                                    </div>
+                                    <button class="carousel-control-prev" type="button"
+                                        data-bs-target="#carouselExampleInterval" data-bs-slide="prev">
+                                        <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+                                        <span class="visually-hidden">Previous</span>
+                                    </button>
+                                    <button class="carousel-control-next" type="button"
+                                        data-bs-target="#carouselExampleInterval" data-bs-slide="next">
+                                        <span class="carousel-control-next-icon" aria-hidden="true"></span>
+                                        <span class="visually-hidden">Next</span>
+                                    </button>
+                                </div>
+                                <br>
+                                <a href="./GrupoGabriel/Sitio2/index.html" class="btn btn-primary">Ver Detalles</a>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col-4">
+                        <div class="card shadow">
+                            <div class="card-header bg-warning-subtle">
+                                <h5>Elect. y Electrónica</h5>
+                                <!-- ----------------------------------DEPARTAMENTO------------------------------------------------>
+                            </div>
+                            <div class="card-body justify-content-center">
+                                <!-- <p class="card-text">With supporting text below as a natural lead-in to additional content.</p> -->
+                                <div id="carouselExampleInterval" class="carousel slide" data-bs-ride="carousel">
+                                    <div class="carousel-inner">
+                                        <div class="carousel-item active" data-bs-interval="1000">
+                                            <!-- <img src="./Assets/Imagenes/2-informatica.jpg" class="d-block w-100"
+                                                alt="..."> -->
+                                            <img src="./Assets/Imagenes/electr-4.webp" class="d-block w-100 medidas" alt="...">
+                                        </div>
+                                        <div class="carousel-item" data-bs-interval="1300">
+                                            <!-- <img src="./Assets/Imagenes/2-informatica.jpg" class="d-block w-100"
+                                                alt="..."> -->
+                                            <img src="./Assets/Imagenes/electr-2.webp" class="d-block w-100 medidas" alt="...">
+                                        </div>
+                                    </div>
+                                    <button class="carousel-control-prev" type="button"
+                                        data-bs-target="#carouselExampleInterval" data-bs-slide="prev">
+                                        <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+                                        <span class="visually-hidden">Previous</span>
+                                    </button>
+                                    <button class="carousel-control-next" type="button"
+                                        data-bs-target="#carouselExampleInterval" data-bs-slide="next">
+                                        <span class="carousel-control-next-icon" aria-hidden="true"></span>
+                                        <span class="visually-hidden">Next</span>
+                                    </button>
+                                </div>
+                                <br>
+                                <a href="./GrupoMario/DptoElectricidadyElectronica-V6.0/index.html" class="btn btn-primary">Ver Detalles</a>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col-4">
+                        <div class="card shadow-lg">
+                            <div class="card-header bg-info-subtle">
+                                <h5>Depto. Técnico</h5>
+                                <!-- ----------------------------------DEPARTAMENTO------------------------------------------------>
+                            </div>
+                            <div class="card-body justify-content-center">
+                                <!-- <p class="card-text">With supporting text below as a natural lead-in to additional content.</p> -->
+                                <div id="carouselExampleInterval" class="carousel slide" data-bs-ride="carousel">
+                                    <div class="carousel-inner">
+                                        <div class="carousel-item active" data-bs-interval="1100">
+                                            <!-- <img src="./Assets/Imagenes/2-informatica.jpg" class="d-block w-100"
+                                                alt="..."> -->
+                                            <img src="./Assets/Imagenes/tecnico-1.webp" class="d-block w-100 medidas" alt="...">
+                                        </div>
+                                        <div class="carousel-item" data-bs-interval="1400">
+                                            <!-- <img src="./Assets/Imagenes/2-informatica.jpg" class="d-block w-100"
+                                                alt="..."> -->
+                                            <img src="./Assets/Imagenes/tecnico-3.webp" class="d-block w-100 medidas" alt="...">
+                                        </div>
+                                    </div>
+                                    <button class="carousel-control-prev" type="button"
+                                        data-bs-target="#carouselExampleInterval" data-bs-slide="prev">
+                                        <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+                                        <span class="visually-hidden">Previous</span>
+                                    </button>
+                                    <button class="carousel-control-next" type="button"
+                                        data-bs-target="#carouselExampleInterval" data-bs-slide="next">
+                                        <span class="carousel-control-next-icon" aria-hidden="true"></span>
+                                        <span class="visually-hidden">Next</span>
+                                    </button>
+                                </div>
+                                <br>
+                                <a href="./GrupoMario/DptoTecnico-V6.0/index.html" class="btn btn-primary">Ver Detalles</a>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="col-3 ">
+                <div class="mydiv animate-bg ">
+                    <div class="firework">
+
+                    </div>
+                    <marquee direction="up" width="100%" height="100%" scrollamount="9">
+                        <h3 class="text-center text-primary">Desarrolladores</h3>
+                        <h4 class="text-center text-primary">Turno Tarde</h4>
+                        <p class="TextoMarquesina">Leiva, Gonzalo</p>
+                        <p class="TextoMarquesina">Gonzalez, Sofia</p>
+                        <p class="TextoMarquesina">Balmaceda, Paolo</p>
+                        <p class="TextoMarquesina">Jorge, Enzo</p>
+                        <p class="TextoMarquesina">Galarza, Alexis</p>
+                        <p class="TextoMarquesina">Alvarez, Axel</p>
+                        <br>
+                        <h4 class="text-center text-primary">Turno Noche</h4>
+                        <p class="TextoMarquesina">Barrios Pablo</p>
+                        <p class="TextoMarquesina">Bogado Silvana</p>
+                        <p class="TextoMarquesina">Escobar Diego</p>
+                        <p class="TextoMarquesina">Valenzuela Juan Manuel</p>
+                        <p class="TextoMarquesina">Vera Nahuel</p>
+                        <br>
+                        <p class="agradecimiento">Muchas Gracias</p>
+                        <p class="agradecimiento">a los/as alumnos/as</p>
+                        <p class="agradecimiento">por su Empeño y Dedicación</p>
+                        <br>
+                        <h4 class="text-center text-primary">Docentes</h4>
+                        <p class="profes">PROF: Asborno, Gabriel Ricardo</p>
+                        <p class="profes">M.F.P.: Fernández, Mario Ramón</p>
+                    </marquee>
+                </div>
+            </div>
+        </div>
+    </div>
+    <script src="./js/bootstrap.bundle.min.js"></script>
+</body>
+
+</html>

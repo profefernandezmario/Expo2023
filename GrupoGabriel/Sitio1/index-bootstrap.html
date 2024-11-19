@@ -1,0 +1,318 @@
+<!DOCTYPE html>
+<html lang="es">
+
+<head>
+    <meta charset="utf-8" />
+    <!-- <link rel="stylesheet" href="style.css" /> -->
+    <link rel="stylesheet" href="./04-ModeloBase/css/bootstrap.min.css" />
+    <script src="https://code.jquery.com/jquery-3.7.1.min.js"></script>
+    <style>
+        /*
+        
+        @Programith
+        
+        */
+
+        @import url('https://pro.fontawesome.com/releases/v5.11.2/css/all.css');
+        @import url('https://fonts.googleapis.com/css2?family=Cedarville+Cursive&family=Konkhmer+Sleokchher&family=Merienda:wght@900&display=swap');
+
+        body {
+            display: flex;
+            flex-direction: row;
+            justify-content: center;
+            align-items: center;
+            overflow: hidden;
+            height: 100%;
+            font-family: "Roboto", sans-serif;
+            transition: 0.25s;
+            background: black;
+        }
+
+        body .options {
+            display: flex;
+            flex-direction: row;
+            align-items: stretch;
+            overflow: hidden;
+            min-width: 600px;
+            max-width: 900px;
+            width: calc(100% - 100px);
+            height: 400px;
+        }
+
+        body .options .option {
+            position: relative;
+            overflow: hidden;
+            min-width: 60px;
+            margin: 10px;
+            background: var(--optionBackground, var(--defaultBackground, #e6e9ed));
+            background-size: auto 120%;
+            background-position: center;
+            cursor: pointer;
+            transition: 0.5s cubic-bezier(0.05, 0.61, 0.41, 0.95);
+        }
+
+        .rowEncabezado {
+            width: 90%;
+            height: 85px;
+            background: #5433ff;
+            /* fallback for old browsers */
+            /*  background: -webkit-linear-gradient(to right, #5433ff, #20bdff, #a5fecb); */
+            /* Chrome 10-25, Safari 5.1-6 */
+            background: linear-gradient(to right, #5433ff, #20bdff, #a5fecb);
+            /* W3C, IE 10+/ Edge, Firefox 16+, Chrome 26+, Opera 12+, Safari 7+ */
+            border-radius: 40px;
+        }
+
+        /*   .col-12 {
+            transition-duration: 2s;
+            transition-timing-function: linear;
+            transition-delay: 1s;
+        } */
+
+        .option:nth-child(1) {
+            --defaultBackground: #ed5565;
+        }
+
+        .option:nth-child(2) {
+            /* --defaultBackground: #fc6e51; */
+            --defaultBackground: #8fff44;
+            
+        }
+
+        .option:nth-child(3) {
+            --defaultBackground: #ffce54;
+        }
+
+        .option:nth-child(4) {
+            --defaultBackground: #2ecc71;
+        }
+
+        .option:nth-child(5) {
+            --defaultBackground: #5d9cec;
+        }
+
+        .option:nth-child(6) {
+            --defaultBackground: #ac92ec;
+        }
+
+        .option.active {
+            flex-grow: 10000;
+            transform: scale(1);
+            max-width: 600px;
+            margin: 0px;
+            border-radius: 40px;
+            background-size: auto 100%;
+        }
+
+        .option.active .label {
+            bottom: 20px;
+            left: 20px;
+        }
+
+        .option.active .label .info>div {
+            left: 0px;
+            opacity: 1;
+        }
+
+        .option:not(.active) {
+            flex-grow: 1;
+            border-radius: 30px;
+        }
+
+        .option:not(.active) .label {
+            bottom: 10px;
+            left: 10px;
+        }
+
+        .option:not(.active) .label .info>div {
+            left: 20px;
+            opacity: 0;
+        }
+
+        .label {
+            display: flex;
+            position: absolute;
+            right: 0px;
+            height: 40px;
+            transition: 0.5s cubic-bezier(0.05, 0.61, 0.41, 0.95);
+        }
+
+        .icon {
+            display: flex;
+            flex-direction: row;
+            justify-content: center;
+            align-items: center;
+            min-width: 40px;
+            max-width: 40px;
+            height: 40px;
+            border-radius: 100%;
+            background-color: white;
+            color: var(--defaultBackground);
+        }
+
+        .info {
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            margin-left: 10px;
+            color:rgb(36, 199, 4);
+            font-weight: bold;
+            background-color: hsl(0, 0%, 0%);
+            border-radius: 20%;
+
+        }
+
+        .h1Encabezado {
+            font-family: Cedarville+Cursive+Sleokchher;
+            font-size: 70px;
+            font-weight: bold;
+            /*  width: 100%;       */
+            /* text-align: center; */
+        }
+        .cuadroInformativo{
+            color:/* #ed5565 */black;
+        }
+        .tituloInformativo{
+            color:#8fff44;            
+        }
+        .cuadroInformativo{
+            background: linear-gradient(to right, #5433ff, #20bdff, #a5fecb);
+            /* W3C, IE 10+/ Edge, Firefox 16+, Chrome 26+, Opera 12+, Safari 7+ */
+            border-radius: 40px;
+            height: ;
+        }
+        
+    </style>
+
+</head>
+<body>
+    <div class="container text-center">
+        <!-- <a href="../../index.html"><i class="fas fa-home" style="color:whitesmoke; height:50px; width: 50px;"></i></a> -->
+        <div class="row">
+            <div class="col-1">
+                <a href="../../index.html"><img src="../html-home-icon-1.jpg" width="100px" height="100px"></i></a>
+            </div>
+            <div class="col-11">
+                <marquee scrollamound="50" class="rowEncabezado">
+                    <h1 class="h1Encabezado"> DEPARTAMENTO DE MECÁNICA Y SOLDADURA</h1>
+                </marquee>
+            </div>
+        </div>
+        <br>
+        <div class="row">
+            <div class="col-12">
+                <div class="options">
+                    <div class="option active" style="background-image: url('mecanico_motos (2).jpg');">
+                        <div class="label">
+                            <div class="icon" style="background-color: rgb(0, 0, 0);">
+                                <a href="#" onclick="Mecanica(event)"><i class="fal fa-motorcycle" style="color: #8fff44;"></i></a>
+                            </div>
+                            <div class="info">
+                                <div class="main" > <p>Mecánico de Motos</p> </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="option" style="background-image: url('electricidad del automotor.jpg');">
+                        <div class="label">
+                            <div class="icon" style="background-color: rgb(0, 0, 0);">                                
+                                <a href="#" onclick="Electricista(event)"><i class="fas fa-car" style="color: #8fff44;"></i></a>
+                            </div>
+                            <div class="info">
+                                <div class="main">Electricista de Automotores</div>                                
+                            </div>
+                        </div>
+                    </div>
+                    <div class="option" style="background-image: url('Mecanica de combustion Interna.jpg');">
+                        <div class="label">
+                            <div class="icon" style="background-color: rgb(0, 0, 0);">
+                                <a href="#" onclick="Combustion(event)"><i class="far fa-car-mechanic" style="color: #8fff44;"></i></a>
+                            </div>
+                            <div class="info">
+                                <div class="main">Mecánico de Motores a Combustión Interna</div>                                
+                            </div>
+                        </div>
+                    </div>
+                    <div class="option" style="background-image: url('mec_sist_encendido_y_alimentacion.jpg');">
+                        <div class="label">
+                            <div class="icon" style="background-color: rgb(0, 0, 0);">
+                                <a href="#" onclick="Encendido(event)"><i class="far fa-power-off" style="color: #8fff44;"></i></a>
+                            </div>
+                            <div class="info">
+                                <div class="main">Mecánico de Sistemas de Encendido y Alimentación</div>                                
+                            </div>
+                        </div>
+                    </div>
+                    <div class="option" style="background-image: url('herrero (1).jpeg');">
+                        <div class="label">
+                            <div class="icon" style="background-color: rgb(0, 0, 0);">
+                                <a href="#" onclick="Herrero(event)"><i class="fad fa-gavel" style="color: #8fff44;"></i></a>
+                            </div>
+                            <div class="info">
+                                <div class="main">Herrero </div>                                
+                            </div>
+                        </div>
+                    </div>
+                    <div class="option" style="background-image: url('Soldador (7).jpeg');">
+                        <div class="label">
+                            <div class="icon" style="background-color: rgb(0, 0, 0);">
+                                <a href="#" onclick="Soldador(event)"><i class="fas fa-sun" style="color: #8fff44;"></i></a>
+                            </div>
+                            <div class="info">
+                                <div class="main">Soldador</div>                                
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="row">
+            <div class="col-1"></div>
+            <div class="col-10 bg-light-subtle cuadroInformativo">
+                <h4 id="tituloInfo" class="tituloInformativo">Nombre de la oferta</h4>
+                <p id="textoInfo" class="textoInformativo">Horarios</p>              
+            </div>
+            <div class="col-1"></div>
+        </div>
+    </div>
+    <script>
+        $(".option").click(function () {
+            $(".option").removeClass("active");
+            $(this).addClass("active");
+        });
+        const titulo = document.getElementById("tituloInfo");
+        const textoHorarios = document.getElementById("textoInfo");
+
+        function Mecanica(e) {           
+            titulo.innerText = "Mecánico de Motos"
+            textoHorarios.innerText = "Turno Mañana\n Lunes a Viernes\n08:00 a 12:00 \n\n Turno Tarde\nLunes a Jueves \n 13:00 a 17:00 \n\n"  
+            
+        }
+        function Electricista(e) {
+            titulo.innerText = "Electricista de Automotores"
+            textoHorarios.innerText ="Turno Mañana\n Lunes a Viernes\n08:00 a 12:00\n\nTurno Noche\n18:00 a 22:00"
+           
+        }
+        function Combustion(e) {
+            titulo.innerText = "Mecánico de Motores a Combustión Interna"
+            textoHorarios.innerText = "Turno mañana\nLunes a Jueves\n08:00 a 12:00"
+            
+        }
+        function Encendido(e) {
+            titulo.innerText ="Mecánico de Sistemas de Encendido y Alimentación"
+            textoHorarios.innerText = "Turno Tarde\nLunes a Jueves\n13:00 a 17:00"
+                          
+        }
+        function Herrero(e) {
+            titulo.innerText ="Herrero"
+            textoHorarios.innerText = "Turno Tarde\nLunes y Martes\n14:00 a 18:00\n\nMiércoles y Jueves\n14:00 a 18:00"
+                  
+        }
+        function Soldador(e) {
+            titulo.innerText ="Soldador"
+            textoHorarios.innerText = "Turno Noche \n Martes y Miércoles \n 18:00 a 22:00 \n\n Jueves y Viernes\n18:00 a 22:00"
+                  
+        }
+    </script>
+</body>
+
+</html>

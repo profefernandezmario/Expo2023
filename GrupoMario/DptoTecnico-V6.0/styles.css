@@ -1,0 +1,303 @@
+/* HACER CARRUSEL AYER, para cada departamento o cada curso*/
+/* Ajustes generales START*/
+* {
+  box-sizing: border-box;
+  margin: 0px;
+  padding: 0px;
+}
+
+body {
+  background-image: url(/GrupoMario/DptoTecnico-V6.0/imagenes/Background/5492517.webp);
+}
+
+main {
+  position: relative;
+  min-height: 100%;
+  padding-bottom: 50px;
+}
+
+/* Ajustes generales END*/
+/* Barra de "navegación" */
+.navBar {
+  background-color: #A51C30;
+}
+
+/* Titulo del NavBar */
+.contenedorTxt {
+  justify-content: center;
+  text-align: center;
+  /* width: 1300px; */
+
+}
+
+.contenedorTxt>h2 {
+  color: white;
+  text-shadow: #FD2D1C 2px 2px 4px;
+}
+
+/* Boton HOME*/
+#btnHome {
+  float: right;
+}
+
+.btnDefault {
+  text-align: center;
+  padding: 7px 7px;
+  color: #FD2D1C;
+  font-size: 20px;
+  text-decoration: none;
+  text-transform: uppercase;
+  transition: 0.5s;
+  letter-spacing: 4px;
+}
+
+.btnDefault:hover {
+  background: #FD2D1C;
+  color: black;
+  box-shadow: 0 0 5px #FD2D1C,
+    0 0 25px #FD2D1C,
+    0 0 50px #FD2D1C,
+    0 0 200px #FD2D1C;
+}
+
+
+/* Logo */
+.logo {
+  margin-right: 15px;
+  width: 90px;
+  height: 50px;
+  float: left;
+}
+
+.LogoEFP7 {
+  width: 80px;
+  left: 5px;
+  margin-top: 3px;
+}
+
+/* Carousel Dpto Informática START */
+#carouselDptoInformatica {
+  margin-bottom: 50px;
+  justify-content: center;
+}
+
+.carousel-item {
+  width: 100%;
+  height: 400px;
+  text-align: center;
+}
+
+.carousel-inner>.carousel-item>img {
+  height: 400px;
+  width: 50vw;
+
+}
+
+.titleCarousel {
+  font-size: 22px;
+  font-weight: bold;
+  text-shadow: #FD2D1C 2px 2px 4px;
+}
+
+.btnCInfo {
+  text-align: center;
+  font-weight: bold;
+  border: 1px white;
+  border-radius: 50px;
+  background-color: transparent;
+  padding: 7px 7px;
+  color: #FD2D1C;
+  font-size: 10px;
+  text-decoration: none;
+  text-transform: uppercase;
+  transition: 0.5s;
+  letter-spacing: 4px;
+}
+
+.btnCInfo:hover {
+  background: #FD2D1C;
+  color: black;
+  box-shadow: 0 0 15px #FD2D1C;
+
+}
+
+/* Carousel Dpto Informática END */
+
+/* Diseño cards */
+.row {
+  justify-content: center;
+}
+
+.card {
+  text-align: center;
+  margin: 2px;
+  margin-left: 5px;
+  color: white;
+  background-color: #A51C30;
+  width: 95vw;
+}
+
+.card:hover {
+  box-shadow: #FD2D1C 1px 1px 2px 2px, #FD2D1C -1px -1px 2px 2px;
+}
+
+#titleCard1 {
+  font-size: 30px;
+  font-weight: bold;
+  margin: 2px;
+  color: white;
+  padding: 7px 7px;
+  border-radius: 50px;
+  border: 5px double #1c31a5;
+  background-color: #1c31a58a;
+}
+
+#titleCard2 {
+  font-size: 30px;
+  font-weight: bold;
+  margin: 2px;
+  color: white;
+  padding: 7px 7px;
+  border-radius: 50px;
+  border: 5px double #1cfd1c;
+  background-color: #1efd1a8a;
+}
+
+#titleCard3 {
+  font-size: 30px;
+  font-weight: bold;
+  margin: 2px;
+  color: white;
+  padding: 7px 7px;
+  border-radius: 50px;
+  border: 5px double #fde61c;
+  background-color: #fde61c8a;
+}
+
+#titleCard4 {
+  font-size: 30px;
+  font-weight: bold;
+  margin: 2px;
+  color: white;
+  padding: 7px 7px;
+  border-radius: 50px;
+  border: 5px double #fd1ccc;
+  background-color: #fd1ccc8a;
+}
+
+#txtCard {
+  font-size: 20px;
+}
+
+.textHs {
+  font-size: 22px;
+}
+
+/* img Card */
+
+#img-card {
+  border: 5px double #FD2D1C;
+  border-radius: 100px;
+  margin: 2px 0px 2px 5px;
+
+}
+
+#img-card:hover {
+  -webkit-transform: scale(1.1);
+  transform: scale(1.1);
+}
+
+#img-card {
+  overflow: hidden;
+}
+
+
+/* start footer */
+footer {
+  width: 100vw;
+  height: 50px;
+  background-color: #A51C30;
+  border-top: 3px solid #FD2D1C;
+  padding: 0px;
+  /* text-align: center; */
+  color: #FD2D1C;
+  position: fixed;
+  bottom: 0;
+}
+
+/* Botones footer */
+#btn01 {
+  float: left;
+}
+
+#btn02 {
+  float: right;
+  margin-right: 12px;
+}
+
+/* Modal config START */
+.myModalContent {
+  background-color: #A51C30;
+}
+
+.myModalContent>h1 {
+  font-size: 30px;
+  font-weight: bold;
+  text-shadow: #FD2D1C 2px 2px 4px;
+}
+
+.myModal {
+  height: 300px;
+  text-align: center;
+  background-color: #A51C30;
+}
+
+.myModal>a {
+  text-decoration: none;
+  color: #FD2D1C;
+}
+
+.modalPic {
+  width: 80px;
+  height: 80px;
+  border: 5px double #FD2D1C;
+  border-radius: 10px;
+}
+
+.modalPic2 {
+  width: 80px;
+  border: 5px double #FD2D1C;
+  border-radius: 10px;
+}
+
+.myModal>p {
+  color: #FD2D1C;
+}
+
+/* MODAL02 CONTACTO */
+.myModalContent02 {
+  background-color: #A51C30;
+}
+
+.myModalContent02>h1 {
+  font-size: 30px;
+  font-weight: bold;
+  text-shadow: #FD2D1C 2px 2px 4px;
+}
+
+.myModal02 {
+  text-align: center;
+  background-color: rgb(231, 231, 231);
+}
+
+.myModal02>a {
+  margin: 5px;
+  text-decoration: none;
+  color: black;
+}
+
+/* Modal config END*/
+
+/* End footer */
+
+/* FOOTER  END*/

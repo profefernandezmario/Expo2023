@@ -1,0 +1,220 @@
+/* Ajustes generales START*/
+*{
+    box-sizing: border-box;
+    margin: 0px;
+    padding: 0px;
+} 
+body{
+  
+  background-image: url(../DptoInfor-V6.0/imagenes/Background/background.jpg);
+}
+
+main{
+    position: relative;
+    min-height: 100%;
+    padding-bottom:50px;
+}
+/* Ajustes generales END*/
+
+/* Barra de "navegación" */
+.navBar{
+    background-color: rgb(0, 122, 223);
+}
+/* Titulo del NavBar */
+.contenedorTxt{
+    justify-content: center;
+    text-align: center;
+}
+
+.contenedorTxt > h2{
+    color: white;
+    text-shadow: #03e9f4 2px 2px 4px;
+}
+/* Barra de "navegación END */
+
+/* Boton HOME*/
+#btnHome{
+  float: right;
+}
+
+.btnDefault{
+    text-align: center;
+    padding: 7px 7px;
+    color: #03e9f4;
+    font-size: 20px;
+    text-decoration: none;
+    text-transform: uppercase;
+    transition: 0.5s;
+    letter-spacing: 4px;
+}
+
+.btnDefault:hover{
+    background: #03e9f4;
+    color: black;
+    box-shadow:  0 0 5px #03e9f4,
+                 0 0 25px #03e9f4,
+                 0 0 50px #03e9f4,
+                 0 0 200px #03e9f4;
+}
+/* Boton HOME END*/
+
+/* Logo START*/
+.logo{
+    margin-right: 15px;
+    width: 90px;
+    height: 50px;
+    float: left;
+}
+.LogoEFP7{
+    width: 80px;
+    left: 5px;
+    margin-top: 3px;
+}
+/* Logo END */ 
+
+/* Carousel Dpto Informática START */
+#carouselDptoInformatica{
+  margin-bottom: 50px;
+  justify-content: center;
+}
+/* Contenedor del carousel */
+.carousel-item{
+  width: 100%;
+  height: 500px;
+  text-align: center;
+}
+/* Imagen del carousel */
+.carousel-inner > .carousel-item > img {
+  height: 500px;
+  width: 600px;
+  
+}
+
+.titleCarousel{
+  font-size: 22px;
+  font-weight: bold;
+  text-shadow: #03e9f4 2px 2px 4px;
+}
+
+/* Carousel Dpto Informática END */
+
+/* Diseño cards START*/
+.row{
+  justify-content: center;
+}
+
+.card{
+    text-align: center;
+    margin: 2px;
+    margin-left: 5px;
+    color: white;
+    background-color: rgb(0, 122, 223);
+    width: 95vw;
+}
+.card:hover{
+    box-shadow: #03e9f4 1px 1px 2px 2px,#03e9f4 -1px -1px 2px 2px;
+}
+
+#titleCard{
+    font-size: 30px;
+    font-weight: bold;
+    text-shadow: #03e9f4 2px 2px 4px;
+
+    background-color: blue;
+    border-radius: 50px;
+    border: 5px double white;
+    padding: 5px;
+}
+
+/* img Card */
+
+#img-card{
+    border: 5px double #03e9f4;
+    border-radius: 100px;
+    margin: 2px 0px 2px 5px;
+    
+}
+#img-card:hover {
+    filter: saturate(180%);
+}
+/* Diseño cards END*/
+
+/* start footer */
+footer {
+    width: 100vw;
+    height: 50px;
+    background-color: rgb(0, 122, 223);
+    border-top: 3px solid #03e9f4;
+    padding: 0px;
+    /* text-align: center; */
+    color: #03e9f4;
+    position: fixed;
+    bottom: 0;
+  }
+  /* Botones footer */
+  #btn01{
+    float: left;
+  }
+  #btn02{
+    float: right;
+    margin-right: 12px;
+  }  
+
+  /* Modal config START */
+  .myModalContent{
+    background-color: rgb(0, 122, 223);
+  }
+  .myModalContent > h1{
+    font-size: 30px;
+    font-weight: bold;
+    text-shadow: #03e9f4 2px 2px 4px; 
+  }
+  
+  .myModal{
+    height: 300px;
+    text-align: center;
+    background-color: rgb(0, 122, 223);
+  }
+
+  .myModal > a{
+    text-decoration: none;
+    color: #03e9f4;
+  }
+
+  .modalPic{
+    width: 80px;
+    height: 80px;
+    border: 5px double #03e9f4;
+    border-radius: 10px;
+  }
+  .modalPic2{
+    width: 80px;
+    border: 5px double #03e9f4;
+    border-radius: 10px;
+  }
+  .myModal > p{
+    color: #03e9f4;
+  }
+
+  /* MODAL02 CONTACTO */
+  .myModalContent02{
+    background-color: rgb(0, 122, 223);
+  }
+  .myModalContent02 > h1{
+    font-size: 30px;
+    font-weight: bold;
+    text-shadow: #03e9f4 2px 2px 4px; 
+  }
+  .myModal02{
+    text-align: center;
+    background-color: rgb(231, 231, 231);
+  }
+  .myModal02 > a{
+    margin: 5px;
+    text-decoration: none;
+    color: black;
+  }
+  /* Modal config END*/
+
+/* FOOTER  END*/
+

@@ -1,0 +1,17 @@
+ <img id="imagen" src="foto1.jpg">
+    <button id="botoncito">Cambiar Imagen</button>
+
+    <script>
+        const boton = document.getElementById("botoncito");
+        var num=2
+        boton.onclick = function(){
+            const imagen = document.getElementById("imagen");   
+            ruta="foto"+num+".jpg"       
+            alert(ruta)
+            imagen.setAttribute("src", ruta)
+        }
+    </script>
+
+
+
+background-image: url("1-informatica.jpg");
